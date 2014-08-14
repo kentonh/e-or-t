@@ -1,0 +1,36 @@
+img {
+	width: 70%;
+	height: auto;
+}
+
+.quote{
+	background: #014A6B;
+	color: #fff;
+	font-size: 2em;
+}
+
+#quotePlace {
+	display: inline-block;
+}
+
+.quote p{
+	font-size: 1em;
+}
+.incorrect{
+	background: #E26970;
+	font-size: 1.5em;
+	text-align: center;
+	color: #fff;
+}
+.incorrect a{
+	color: #8CC4F7;
+}
+.correct{
+	background: #E98E6F;
+	font-size: 1.5em;
+	text-align: center;
+	color: #fff;
+}
+.correct a{
+	color: #014A6B;
+}
