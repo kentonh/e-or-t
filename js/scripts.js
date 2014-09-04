@@ -20,27 +20,27 @@ var quotes = [
 var randomNumber = Math.floor(Math.random()*(quotes.length - 1)) + 1;
 var quote = quotes[randomNumber];
 
-document.getElementById('quotePlace').innerHTML = quote;
+document.getElementById('quotePlace').innerHTML = quote.text;
 
-function einstein(randomNumber) {
-	if(randomNumber % 2 !== 0) {
+function einstein(quote) {
+	if( quote.name == "E") {
 		return '<div class="correct">Correct! <a href="">Want another?</a></div>';
 	} else { return '<div class="incorrect">Incorrect! <a href="">Want another?</a></div>' }
 }
 
-function tesla(randomNumber) {
-	if(randomNumber % 2 === 0) {
+function tesla(quote) {
+	if( quote.name == "T") {
 		return '<div class="correct">Correct! <a href="">Want another?</a></div>';
 	} else { return '<div class="incorrect">Incorrect! <a href="">Want another?</a></div>' }
 }
 
 $(document).ready( function() {
 	$('#einstein').one("click",function(event) {
-		$("#answer").append(einstein(randomNumber));
+		$("#answer").append(einstein(quote));
 		$('#tesla').off("click");
 	});
 	$('#tesla').one("click",function(event) {
-		$("#answer").append(tesla(randomNumber));
+		$("#answer").append(tesla(quote));
 		$('#einstein').off("click");
 	});
 });
